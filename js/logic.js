@@ -1,3 +1,5 @@
+// AI (Easy) Version: code for state of play
+ 
 const game = {
 
   startingPlayer: "X",

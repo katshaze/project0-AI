@@ -1,4 +1,4 @@
-// Code for the AI (Easy) version
+// AI (Easy) version: code for interaction with the browser
 
 const reset = function() {
 
