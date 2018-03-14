@@ -1,5 +1,41 @@
 // AI (Easy) version: code for interaction with the browser
 
+$(document).ready(function() {
+  reset(); //this will mean that on refresh, the starting player will be blowfish, so that the human can start first game.
+
+  // event listener for click to reset in endgame situation.
+  $('body').on('click', function() {
+    console.log('body clicked'); // TODO: remove later
+
+    if (game.endgame === true) {
+    console.log('body event has run and endgame is true. about to reset.');
+    reset();
+    };
+  });
+
+  $('.square').on('click', function(event) {
+    // if the last click caused an endgame, exit out of here instead of running the player's turn
+    if (game.endgame === true) {
+      return;
+    }
+    // endgame is false if we get to here. if so, turn off the endgame event listener by using stop propogation for now since it's not an endgame situation.
+    event.stopPropagation();
+
+    const square = $(this).attr("id"); //get the square name
+    game.playTurn(square, game.currentPlayer);
+    render();
+    if (game.endgame != true) {
+      setTimeout(function() {
+        game.playTurn(game.chooseSquareAI(), game.currentPlayer);
+        render();
+      }, 500);
+    }
+  });
+
+  $('.reset').on('click', 'button', reset);
+
+});
+
 const reset = function() {
 
   //switch starting player from what it was at start of last game
@@ -87,45 +123,15 @@ const render = function() {
      .blowfish`).addClass('makeBig');
   };
 
+  // The three winning Xs flash if X wins.
+  // if (game.winningCombo["X"] === true) {
+  //   $(`#${game.winningStrip[0]} .x`).addClass('makeFlash');
+  //   $(`#${game.winningStrip[1]} .x`).addClass('makeFlash');
+  //   $(`#${game.winningStrip[2]} .x`).addClass('makeFlash');
+  // }
+
   // The win gets added to the relevant tally
   for (let key in game.winsTally) {
     $(`.${key}-tally`).html(`${game.winsTally[key]}`);
   };
-
 };
-
-$(document).ready(function() {
-  reset(); //this will mean that on refresh, the starting player will be blowfish, so that the human can start first game.
-
-  // event listener for click to reset in endgame situation.
-  $('body').on('click', function() {
-    console.log('body clicked'); // TODO: remove later
-
-    if (game.endgame === true) {
-    console.log('body event has run and endgame is true. about to reset.');
-    reset();
-    };
-  });
-
-  $('.square').on('click', function(event) {
-    // if the last click caused an endgame, exit out of here instead of running the player's turn
-    if (game.endgame === true) {
-      return;
-    }
-    // endgame is false if we get to here. if so, turn off the endgame event listener by using stop propogation for now since it's not an endgame situation.
-    event.stopPropagation();
-
-    const square = $(this).attr("id"); //get the square name
-    game.playTurn(square, game.currentPlayer);
-    render();
-    if (game.endgame != true) {
-      setTimeout(function() {
-        game.playTurn(game.chooseSquareAI(), game.currentPlayer);
-        render();
-      }, 500);
-    }
-  });
-
-  $('.reset').on('click', 'button', reset);
-
-});

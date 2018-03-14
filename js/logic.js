@@ -1,5 +1,5 @@
 // AI (Easy) Version: code for state of play
- 
+
 const game = {
 
   startingPlayer: "X",
@@ -33,6 +33,8 @@ const game = {
 
   winningSquare: "",
 
+  winningStrip: [],
+
   winsTally: {
     "X": 0,
     "Blowfish": 0
@@ -41,27 +43,35 @@ const game = {
   checkForWin: function(player) {
     if (this.boardStatus[1] === player && this.boardStatus[2] === player && this.boardStatus[3] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [1,2,3];
     }
     if (this.boardStatus[1] === player && this.boardStatus[5] === player && this.boardStatus[9] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [1,5,9];
     }
     if (this.boardStatus[1] === player && this.boardStatus[4] === player && this.boardStatus[7] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [1,4,7];
     }
     if (this.boardStatus[2] === player && this.boardStatus[5] === player && this.boardStatus[8] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [2,5,8];
     }
     if (this.boardStatus[3] === player && this.boardStatus[6] === player && this.boardStatus[9] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [3,6,9];
     }
     if (this.boardStatus[3] === player && this.boardStatus[5] === player && this.boardStatus[7] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [3,5,7];
     }
     if (this.boardStatus[4] === player && this.boardStatus[5] === player && this.boardStatus[6] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [4,5,6];
     }
     if (this.boardStatus[7] === player && this.boardStatus[8] === player && this.boardStatus[9] === player) {
       this.winningCombo[player] = true;
+      this.winningStrip = [7,8,9];
     }
   },
 
