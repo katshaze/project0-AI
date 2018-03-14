@@ -1,4 +1,4 @@
-//branch: ai-feature-easy
+// Code for the AI (Easy) version
 
 const reset = function() {
 
@@ -95,7 +95,7 @@ const render = function() {
 };
 
 $(document).ready(function() {
-  reset(); //this means on refresh, the starting player will be blowfish, so that the human can start first game.
+  reset(); //this will mean that on refresh, the starting player will be blowfish, so that the human can start first game.
 
   // event listener for click to reset in endgame situation.
   $('body').on('click', function() {
@@ -115,7 +115,7 @@ $(document).ready(function() {
     // endgame is false if we get to here. if so, turn off the endgame event listener by using stop propogation for now since it's not an endgame situation.
     event.stopPropagation();
 
-    let square = $(this).attr("id"); //get the square name
+    const square = $(this).attr("id"); //get the square name
     game.playTurn(square, game.currentPlayer);
     render();
     if (game.endgame != true) {

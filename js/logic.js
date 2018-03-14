@@ -1,4 +1,3 @@
-
 const game = {
 
   startingPlayer: "X",

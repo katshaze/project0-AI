@@ -1,7 +1,7 @@
 /* For testing purposes - remove later */
-/* div {
+div {
   border: red solid 1px;
-} */
+}
 /* Above is for testing purposes - remove later */
 
 * {
@@ -29,7 +29,7 @@ h1 {
 .board {
   width: 500px;
   height: 500px;
-  margin: 22px auto 0 auto;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -39,7 +39,6 @@ h1 {
   border-color: black;
   border-width: 2px;
   display: inline-block;
-  /*position: absolute;*/
   position: relative;
 }
 
@@ -108,15 +107,15 @@ h1 {
   visibility: hidden;
 }
 
-nav {
+.tally-bar {
   background-color: #bbb;
 }
-nav ul {
+.tally-bar ul {
   padding: 0;
   text-align: center;
 }
 
-nav ul li {
+.tally-bar ul li {
   display: inline-block;
   padding: 0 30px;
   font-size: 30px;
