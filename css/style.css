@@ -1,7 +1,7 @@
 /* For testing purposes - remove later */
-div {
+/* div {
   border: red solid 1px;
-}
+} */
 /* Above is for testing purposes - remove later */
 
 * {
@@ -130,7 +130,7 @@ nav ul li {
 butt {
   font-size: 24px;
   padding: 4px 18px;
-  background-color: #36424e;
+  background-color: #616067;
   color: white;
   border: solid 1px black;
   border-radius: 10%;
