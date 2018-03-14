@@ -17,8 +17,8 @@ body {
 h1 {
   text-align: center;
   color: #13283d;
-  margin: 20px;
-  font-size: 60px;
+  margin: 10px;
+  font-size: 50px;
 }
 
 .container {
@@ -87,7 +87,7 @@ h1 {
 }
 
 .result {
-  margin: 30px auto;
+  margin: 25px auto;
   font-size: 42px;
   height: 42px;
   position: relative;
