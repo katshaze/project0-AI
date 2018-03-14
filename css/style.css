@@ -1,0 +1,158 @@
+/* For testing purposes - remove later */
+/* div {
+  border: red solid 1px;
+} */
+/* Above is for testing purposes - remove later */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d8f4e4;
+  font-family: 'Amatic SC', cursive;
+  color: #13283d;
+}
+
+h1 {
+  text-align: center;
+  color: #13283d;
+  margin: 20px;
+  font-size: 60px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  margin: 22px auto 0 auto;
+  position: relative;
+}
+
+.square {
+  width: 32.9%;
+  height: 32.9%;
+  border-color: black;
+  border-width: 2px;
+  display: inline-block;
+  /*position: absolute;*/
+  position: relative;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.top {
+  border-bottom-style: solid;
+}
+
+.centre {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.bottom {
+  border-top-style: solid;
+}
+
+.played {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-size: 120px;
+  line-height: 163.5px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #0c1825;
+}
+
+.x {
+  visibility: hidden;
+}
+
+.blowfish {
+  visibility: hidden;
+  font-size: 120px;
+  transition: transform 1.5s;
+}
+
+.makeBig {
+  transform: scale(1.8);
+}
+
+.result {
+  margin: 30px auto;
+  font-size: 42px;
+  height: 42px;
+  position: relative;
+  font-family: 'Amatic SC', cursive;
+}
+
+.result div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.X-wins, .Blowfish-wins, .Draw-wins, .Blowfish-starts, .X-starts {
+  visibility: hidden;
+}
+
+nav {
+  background-color: #bbb;
+}
+nav ul {
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 30px;
+}
+
+.reset {
+  margin: 30px auto 0  auto;
+  text-align: center;
+}
+
+button {
+  font-size: 24px;
+  padding: 4px 18px;
+  background-color: #e1f4e9;
+  border: solid 1px black;
+  border-radius: 10%;
+  font-family: 'Amatic SC', cursive;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/*.invisible {
+  visibility: hidden;
+} */
+
+
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+*/
