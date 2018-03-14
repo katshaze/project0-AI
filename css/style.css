@@ -92,6 +92,7 @@ h1 {
   height: 42px;
   position: relative;
   font-family: 'Amatic SC', cursive;
+  font-weight: bold;
 }
 
 .result div {
@@ -109,6 +110,7 @@ h1 {
 
 .tally-bar {
   background-color: #bbb;
+  font-weight: bold;
 }
 
 nav ul {
@@ -118,7 +120,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 0 30px;
+  padding: 0 25px;
   font-size: 30px;
 }
 
@@ -130,11 +132,15 @@ nav ul li {
 butt {
   font-size: 24px;
   padding: 4px 18px;
-  background-color: #616067;
-  color: white;
+  background-color: #bbb;
+  color: #13283d;
   border: solid 1px black;
   border-radius: 10%;
   font-family: 'Amatic SC', cursive;
+}
+
+.switch-screen {
+  background-color: #009677
 }
 
 butt:hover {
