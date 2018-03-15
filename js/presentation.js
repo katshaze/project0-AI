@@ -5,12 +5,9 @@ $(document).ready(function() {
 
   // event listener for click to reset in endgame situation.
   $('body').on('click', function() {
-    console.log('body clicked'); // TODO: remove later
-
     if (game.endgame === true) {
-    console.log('body event has run and endgame is true. about to reset.');
-    reset();
-    };
+      reset();
+    }
   });
 
   $('.square').on('click', function(event) {
@@ -88,7 +85,7 @@ const newGameRender = function() {
       game.playTurn(game.chooseSquareAI(), game.currentPlayer);
       render();
     }, 300);
-  };
+  }
 };
 
 const render = function() {
@@ -98,7 +95,7 @@ const render = function() {
     if (game.turnsPlayed[key] > 1) {
       $(`.${key}-starts`).removeClass('visible');
     }
-  };
+  }
 
   // update the board squares with wherever X/Blowfish have played.
   for (let key in game.boardStatus) {
@@ -108,30 +105,30 @@ const render = function() {
     if (game.boardStatus[key] === "Blowfish") {
       $(`#${key} .blowfish`).addClass('visible');
     }
-  };
+  }
 
   // if winningCombo[X/Blowfish/Draw] is true, make text appear at bottom saying X/Blowfish/Draw Wins (simple mode)
   for (let key in game.winningCombo) {
     if (game.winningCombo[key] === true) {
       $(`.${key}-wins`).addClass('visible');
     }
-  };
+  }
 
   // The blowfish puffs up if it wins.
   if (game.winningCombo["Blowfish"] === true) {
     $(`#${game.winningSquare}
      .blowfish`).addClass('makeBig');
-  };
+  }
 
   // The three winning Xs flash if X wins.
   if (game.winningCombo["X"] === true) {
     $(`#${game.winningStrip[0]} .x`).addClass('animated flash');
     $(`#${game.winningStrip[1]} .x`).addClass('animated flash');
     $(`#${game.winningStrip[2]} .x`).addClass('animated flash');
-  };
+  }
 
   // The win gets added to the relevant tally
   for (let key in game.winsTally) {
     $(`.${key}-tally`).html(`${game.winsTally[key]}`);
-  };
+  }
 };

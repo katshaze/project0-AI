@@ -58,7 +58,7 @@ const game = {
   //function to randomly choose a square for the computer to play in based on what's available. gets called from presentation.js at same time as running the playturn function for the computer.
   chooseSquareAI: function() {
     let availableSquares = [];
-    for (key in this.boardStatus) {
+    for (let key in this.boardStatus) {
       if (this.boardStatus[key] === "empty") {
         availableSquares.push(key);
       }
@@ -126,4 +126,4 @@ const game = {
       this.currentPlayer = "X";
     }
   }
-}
+};
