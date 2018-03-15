@@ -76,6 +76,14 @@ main {
   transform: scale(1.8);
 }
 
+/* .x {
+  transition: color 1s;
+} */
+
+/* .rainbow {
+  color: #8a4cbc;
+} */
+
 .result {
   margin: 20px auto;
   font-size: 42px;

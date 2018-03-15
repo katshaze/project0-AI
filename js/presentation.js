@@ -110,7 +110,7 @@ const render = function() {
     }
   };
 
-  // if winningCombo[X/Blowfish/Draw] is true, make text appear at bottom saying X/Blowfish/Draw Wins (simple mode) // TODO: Better mode: the three relevant X flash on screen by switching on a special class
+  // if winningCombo[X/Blowfish/Draw] is true, make text appear at bottom saying X/Blowfish/Draw Wins (simple mode)
   for (let key in game.winningCombo) {
     if (game.winningCombo[key] === true) {
       $(`.${key}-wins`).addClass('visible');
@@ -124,11 +124,11 @@ const render = function() {
   };
 
   // The three winning Xs flash if X wins.
-  // if (game.winningCombo["X"] === true) {
-  //   $(`#${game.winningStrip[0]} .x`).addClass('makeFlash');
-  //   $(`#${game.winningStrip[1]} .x`).addClass('makeFlash');
-  //   $(`#${game.winningStrip[2]} .x`).addClass('makeFlash');
-  // }
+  if (game.winningCombo["X"] === true) {
+    $(`#${game.winningStrip[0]} .x`).addClass('animated flash');
+    $(`#${game.winningStrip[1]} .x`).addClass('animated flash');
+    $(`#${game.winningStrip[2]} .x`).addClass('animated flash');
+  };
 
   // The win gets added to the relevant tally
   for (let key in game.winsTally) {
