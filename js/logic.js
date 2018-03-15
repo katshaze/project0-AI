@@ -40,6 +40,33 @@ const game = {
     "Blowfish": 0
   },
 
+  playTurn: function(square, player) {
+    if (this.boardStatus[square] === "empty") {
+      this.boardStatus[square] = player;
+      this.turnsPlayed[player] += 1;
+      this.checkForWin(player);
+      this.checkForDraw();
+      this.checkForEndgame();
+      if (this.winningCombo[player] === true) {
+        this.winningSquare = square;
+        this.winsTally[player] += 1;
+      }
+      this.updateCurrentPlayer(player);
+    }
+  },
+
+  //function to randomly choose a square for the computer to play in based on what's available. gets called from presentation.js at same time as running the playturn function for the computer.
+  chooseSquareAI: function() {
+    let availableSquares = [];
+    for (key in this.boardStatus) {
+      if (this.boardStatus[key] === "empty") {
+        availableSquares.push(key);
+      }
+    }
+    let chosenSquare = availableSquares[Math.floor(Math.random() * availableSquares.length)];
+    return chosenSquare;
+  },
+
   checkForWin: function(player) {
     if (this.boardStatus[1] === player && this.boardStatus[2] === player && this.boardStatus[3] === player) {
       this.winningCombo[player] = true;
@@ -98,35 +125,5 @@ const game = {
     } else {
       this.currentPlayer = "X";
     }
-  },
-
-  playTurn: function(square, player) {
-    if (this.boardStatus[square] === "empty") {
-      console.log(`square ${square} is empty ready to be populated`);
-      this.boardStatus[square] = player;
-      this.turnsPlayed[player] += 1;
-    }
-    this.checkForWin(player);
-    this.checkForDraw();
-    this.checkForEndgame();
-    if (this.winningCombo[player] === true) {
-      this.winningSquare = square;
-      console.log(`${this.winningSquare} is ${player}'s winning square.`); // TODO: remove later
-      this.winsTally[player] += 1;
-    }
-    this.updateCurrentPlayer(player);
-  },
-
-  chooseSquareAI: function() {
-    let availableSquares = [];
-    for (key in this.boardStatus) {
-      if (this.boardStatus[key] === "empty") {
-        availableSquares.push(key);
-      }
-    }
-    let chosenSquare = availableSquares[Math.floor(Math.random() * availableSquares.length)];
-    console.log(`AI's randomly chosen square is ${chosenSquare}, meaning AI play turn function is in progress`);
-    return chosenSquare;
   }
-
 }
