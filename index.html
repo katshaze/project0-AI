@@ -2,63 +2,68 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <style> @import url('https://fonts.googleapis.com/css?family=Abel|Montserrat|PT+Sans+Narrow|Quicksand|Raleway');</style>
     <style>
-    @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Julius+Sans+One|Paytone+One|Syncopate');
-    </style>
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300');
     </style>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Noughts & Crosses</title>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/presentation.js"></script>
-
+    <title>Noughts & Crosses</title>
   </head>
-  <body>
-    <h1>NOUGHTS & CROSSES</h1>
-    <div class="container">
-      <div class="board">
 
+  <body>
+    <header>
+      <h1>NOUGHTS & CROSSES</h1>
+    </header>
+
+    <main>
+      <div class="board">
         <div class="square top" id="1">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square top centre" id="2">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square top" id="3">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square" id="4">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square centre" id="5">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square" id="6">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square bottom" id="7">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square bottom centre" id="8">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
+
         <div class="square bottom" id="9">
           <div class="square played x">X</div>
           <div class="square played blowfish">&#128033;</div>
         </div>
-
       </div>
 
       <div class="result">
@@ -66,28 +71,28 @@
         <div class="Blowfish-wins">BLOWFISH WINS!</div>
         <div class="Draw-wins">IT'S A DRAW... PLAY AGAIN?</div>
         <div class="X-starts">Computer (X) starts this round</div>
-        <div class="Blowfish-starts">Make the first move, Blowfish &#128033;</div>
+        <div class="Blowfish-starts">Make the first move, Blowfish</div>
       </div>
+    </main>
 
-      <nav class="tally-bar">
-        <ul>
-          <li>Wins tally >></li>
-          <li class="left-tally">You &#128033;:  <span class="Blowfish-tally">0</span></li>
-          <li class="right-tally">Computer (X):  <span class="X-tally">0</span></li>
-        </ul>
-      </nav>
+    <aside>
+      <ul>
+        <li class="game-type">&#128033; vs. COMPUTER</li>
+        <li>Wins tally >></li>
+        <li class="left-tally">You &#128033;:  <span class="Blowfish-tally">0</span></li>
+        <li class="right-tally">Computer (X):  <span class="X-tally">0</span></li>
+      </ul>
+    </aside>
 
-      <nav class="reset">
-        <ul>
-          <li>
-            <butt>Reset</butt>
-          </li>
-          <li>
-            <butt class="switch-screen"><a href="https://katshaze.github.io/project0">Try two player version</a></butt>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
+    <footer>
+      <ul>
+        <li>
+          <butt>Reset</butt>
+        </li>
+        <li>
+          <butt class="switch-screen"><a href="https://katshaze.github.io/project0">Try two player version</a></butt>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

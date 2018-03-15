@@ -1,8 +1,7 @@
-/* For testing purposes - remove later */
-/* div {
+/* For testing purposes:
+div {
   border: red solid 1px;
 } */
-/* Above is for testing purposes - remove later */
 
 * {
   box-sizing: border-box;
@@ -21,7 +20,7 @@ h1 {
   font-size: 50px;
 }
 
-.container {
+main {
   max-width: 90%;
   margin: 0 auto;
 }
@@ -40,10 +39,6 @@ h1 {
   border-width: 2px;
   display: inline-block;
   position: relative;
-}
-
-.square:hover {
-  cursor: pointer;
 }
 
 .top {
@@ -72,16 +67,7 @@ h1 {
   color: #0c1825;
 }
 
-.x {
-  visibility: hidden;
-}
-
-/* .makeFlash {
-
-} */
-
 .blowfish {
-  visibility: hidden;
   font-size: 120px;
   transition: transform 1.5s;
 }
@@ -91,7 +77,7 @@ h1 {
 }
 
 .result {
-  margin: 25px auto;
+  margin: 20px auto;
   font-size: 42px;
   height: 42px;
   position: relative;
@@ -108,29 +94,29 @@ h1 {
   text-align: center;
 }
 
-.X-wins, .Blowfish-wins, .Draw-wins, .Blowfish-starts, .X-starts {
+.x, .blowfish, .X-wins, .Blowfish-wins, .Draw-wins, .Blowfish-starts, .X-starts {
   visibility: hidden;
 }
 
-.tally-bar {
+aside {
   background-color: #bbb;
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 30px;
   font-weight: bold;
 }
 
-nav ul {
-  padding: 0;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 0 25px;
-  font-size: 30px;
-}
-
-.reset ul {
-  padding: 0;
-  text-align: center;
+.game-type {
+  font-size: 36px;
+  padding-right: 40px;
 }
 
 butt {
@@ -144,10 +130,10 @@ butt {
 }
 
 .switch-screen {
-  background-color: #009677
+  background-color: #009677;
 }
 
-butt:hover {
+.square:hover, butt:hover {
   cursor: pointer;
 }
 
@@ -159,16 +145,3 @@ a {
 .visible {
   visibility: visible;
 }
-
-/*.invisible {
-  visibility: hidden;
-} */
-
-
-
-/*
-font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'PT Sans Narrow', sans-serif;
-*/
