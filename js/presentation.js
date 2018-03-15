@@ -34,7 +34,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.reset').on('click', 'button', reset);
+  $('#reset').on('click', reset);
 });
 
 const reset = function() {

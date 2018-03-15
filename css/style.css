@@ -127,7 +127,7 @@ ul li {
   padding-right: 40px;
 }
 
-butt {
+button {
   font-size: 24px;
   padding: 4px 18px;
   background-color: #bbb;
@@ -141,7 +141,7 @@ butt {
   background-color: #009677;
 }
 
-.square:hover, butt:hover {
+.square:hover, button:hover {
   cursor: pointer;
 }
 
