@@ -29,10 +29,10 @@ Simple online game of Noughts & Crosses, either two player or human vs. computer
 * This approach was maintained when modifying the code to create the human vs. computer version.
 
 ## TODO
-- [ ]Players to be able to choose their icons
-- [ ]Link two player and AI version into single webpage
-- [ ]Maaaaaybe have a crack at creating an AI (hard) version
-- [ ]Expand to a 4x4 board for a 'Connect Four'-style game
+- [ ] Players to be able to choose their icons
+- [ ] Link two player and AI version into single webpage
+- [ ] Maaaaaybe have a crack at creating an AI (hard) version
+- [ ] Expand to a 4x4 board for a 'Connect Four'-style game
 
 ## Licensing
 
