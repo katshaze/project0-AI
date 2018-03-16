@@ -1,6 +1,10 @@
 # Project0 / Project0-AI
 Simple online game of Noughts & Crosses, either two player or human vs. computer (easy version).
 
+This repository is for the human vs. computer version.
+
+Separate github repository for two player version is here: https://github.com/katshaze/project0
+
 ## Get it running:
 * Open in your browser using: https://katshaze.github.io/project0
 * The page has a link to the AI (Easy) version, but if you're specifically looking for the AI version, it's here: https://katshaze.github.io/project0-AI
