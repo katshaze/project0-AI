@@ -77,6 +77,7 @@ const reset = function() {
 const newGameRender = function() {
   $('.visible').removeClass('visible');
   $('.makeBig').removeClass('makeBig');
+  $('.flash').removeClass('animated flash');
   $(`.${game.startingPlayer}-starts`).addClass('visible');
 
   //if it's start of a new game, board is reset and starting player is X (computer), play turn function is called for the computer.
