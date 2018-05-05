@@ -1,0 +1,25 @@
+{
+  "name": "project0-AI",
+  "version": "1.0.0",
+  "description": "Simple online game of Noughts & Crosses, either two player or human vs. computer (easy version).",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d js" , 
+    "watch": "babel --watch src -d js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katshaze/project0-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katshaze/project0-AI/issues"
+  },
+  "homepage": "https://github.com/katshaze/project0-AI#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1"
+  }
+}
