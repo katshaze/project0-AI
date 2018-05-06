@@ -26,15 +26,15 @@ main {
 }
 
 .board {
-  width: 500px;
-  height: 500px;
+  width: 345px;
+  height: 345px;
   margin: 0 auto;
   position: relative;
 }
 
 .square {
-  width: 32.9%;
-  height: 32.9%;
+  width: 31.9%;
+  height: 31.9%;
   border-color: black;
   border-width: 2px;
   display: inline-block;
@@ -60,29 +60,21 @@ main {
   top: 0;
   left: 0;
   position: absolute;
-  font-size: 120px;
-  line-height: 163.5px;
+  font-size: 102px;
+  line-height: 104.5px;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #0c1825;
 }
 
 .blowfish {
-  font-size: 120px;
+  font-size: 97px;
   transition: transform 1.5s;
 }
 
 .makeBig {
   transform: scale(1.8);
 }
-
-/* .x {
-  transition: color 1s;
-} */
-
-/* .rainbow {
-  color: #8a4cbc;
-} */
 
 .result {
   margin: 20px auto;
@@ -106,7 +98,7 @@ main {
   visibility: hidden;
 }
 
-aside {
+.tally {
   background-color: #bbb;
 }
 

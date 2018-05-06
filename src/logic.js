@@ -64,6 +64,7 @@ const game = {
       }
     }
     let chosenSquare = availableSquares[Math.floor(Math.random() * availableSquares.length)];
+    console.log(chosenSquare);
     return chosenSquare;
   },
 
