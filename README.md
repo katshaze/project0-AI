@@ -1,7 +1,10 @@
 # Project0-AI
 
-Update: the webpage for this game of human vs. computer version of Noughts & Crosses has been disabled and the repository archived because the code was integrated into my main project0 webpage. My [project0](https://github.com/katshaze/project0) is now optionally a two player or human vs. computer version of the classic Noughts & Crosses game. Check out the live version [here](https://katshaze.github.io/project0)
+___
 
+_**Update:** the webpage for this game of human vs. computer version of Noughts & Crosses has been disabled and the repository archived because the code was integrated into my main project0 webpage. My [project0](https://github.com/katshaze/project0) is now optionally a two player or human vs. computer version of the classic Noughts & Crosses game. Check out the live version [here](https://katshaze.github.io/project0)._
+
+___
 
 Simple online game of Noughts & Crosses, either two player or human vs. computer (easy version).
 
